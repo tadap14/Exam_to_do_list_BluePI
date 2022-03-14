@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.9.10 on darwin)" generated="20220314 19:45:33.590" rpa="false" schemaversion="2">
+<suite id="s1" name="Test To do list" source="/Users/hpdcp044/PycharmProjects/To_Do_List/Test/Test_To_do_list.robot">
+<test id="s1-t1" name="Test case 1 Open browser and go to To-Do-List page">
+<kw name="Open the browser">
+<msg timestamp="20220314 19:45:33.668" level="TRACE">Arguments: [  ]</msg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BRWOSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220314 19:45:33.668" level="TRACE">Arguments: [ 'https://abhigyank.github.io/To-Do-List/' | 'Chrome' ]</msg>
+<msg timestamp="20220314 19:45:33.668" level="INFO">Opening browser 'Chrome' to base url 'https://abhigyank.github.io/To-Do-List/'.</msg>
+<msg timestamp="20220314 19:45:34.184" level="DEBUG">POST http://localhost:56577/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": []}}}, "desiredCapabilities": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": []}}}</msg>
+<msg timestamp="20220314 19:45:34.185" level="DEBUG">Starting new HTTP connection (1): localhost:56577</msg>
+<msg timestamp="20220314 19:45:35.188" level="DEBUG">http://localhost:56577 "POST /session HTTP/1.1" 200 797</msg>
+<msg timestamp="20220314 19:45:35.188" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220314 19:45:35.188" level="DEBUG">POST http://localhost:56577/session/520aaedef644910e17786cf3cb906c06/timeouts {"script": 5000}</msg>
+<msg timestamp="20220314 19:45:35.189" level="DEBUG">http://localhost:56577 "POST /session/520aaedef644910e17786cf3cb906c06/timeouts HTTP/1.1" 200 14</msg>
+<msg timestamp="20220314 19:45:35.189" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220314 19:45:35.189" level="DEBUG">POST http://localhost:56577/session/520aaedef644910e17786cf3cb906c06/timeouts {"implicit": 0}</msg>
+<msg timestamp="20220314 19:45:35.189" level="DEBUG">http://localhost:56577 "POST /session/520aaedef644910e17786cf3cb906c06/timeouts HTTP/1.1" 200 14</msg>
+<msg timestamp="20220314 19:45:35.190" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220314 19:45:35.190" level="DEBUG">POST http://localhost:56577/session/520aaedef644910e17786cf3cb906c06/url {"url": "https://abhigyank.github.io/To-Do-List/"}</msg>
+<msg timestamp="20220314 19:45:35.738" level="DEBUG">http://localhost:56577 "POST /session/520aaedef644910e17786cf3cb906c06/url HTTP/1.1" 200 14</msg>
+<msg timestamp="20220314 19:45:35.738" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220314 19:45:35.738" level="DEBUG">Opened browser with session id 520aaedef644910e17786cf3cb906c06.</msg>
+<msg timestamp="20220314 19:45:35.738" level="TRACE">Return: 1</msg>
+<status status="PASS" starttime="20220314 19:45:33.668" endtime="20220314 19:45:35.738"/>
+</kw>
+<msg timestamp="20220314 19:45:35.738" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220314 19:45:33.668" endtime="20220314 19:45:35.738"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220314 19:45:35.739" level="TRACE">Arguments: [ '2s' ]</msg>
+<msg timestamp="20220314 19:45:37.741" level="INFO">Slept 2 seconds</msg>
+<msg timestamp="20220314 19:45:37.741" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220314 19:45:35.738" endtime="20220314 19:45:37.742"/>
+</kw>
+<status status="PASS" starttime="20220314 19:45:33.668" endtime="20220314 19:45:37.742"/>
+</test>
+<test id="s1-t2" name="Test case 2 add task and open tap task">
+<kw name="Add to do list 1">
+<msg timestamp="20220314 19:45:37.746" level="TRACE">Arguments: [  ]</msg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:new-task</arg>
+<arg>${TASK1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220314 19:45:37.747" level="TRACE">Arguments: [ 'id:new-task' | 'Exam for BluePI' ]</msg>
+<msg timestamp="20220314 19:45:37.747" level="INFO">Typing text 'Exam for BluePI' into text field 'id:new-task'.</msg>
+<msg timestamp="20220314 19:45:37.748" level="DEBUG">POST http://localhost:56577/session/520aaedef644910e17786cf3cb906c06/elements {"using": "css selector", "value": "[id=\"new-task\"]"}</msg>
+<msg timestamp="20220314 19:45:37.761" level="DEBUG">http://localhost:56577 "POST /session/520aaedef644910e17786cf3cb906c06/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20220314 19:45:37.761" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220314 19:45:37.762" level="DEBUG">POST http://localhost:56577/session/520aaedef644910e17786cf3cb906c06/element/a1ae0635-0871-4c59-a078-eadab97b3355/clear {"id": "a1ae0635-0871-4c59-a078-eadab97b3355"}</msg>
+<msg timestamp="20220314 19:45:37.785" level="DEBUG">http://localhost:56577 "POST /session/520aaedef644910e17786cf3cb906c06/element/a1ae0635-0871-4c59-a078-eadab97b3355/clear HTTP/1.1" 200 14</msg>
+<msg timestamp="20220314 19:45:37.785" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220314 19:45:37.785" level="DEBUG">POST http://localhost:56577/session/520aaedef644910e17786cf3cb906c06/element/a1ae0635-0871-4c59-a078-eadab97b3355/value {"text": "Exam for BluePI", "value": ["E", "x", "a", "m", " ", "f", "o", "r", " ", "B", "l", "u", "e", "P", "I"], "id": "a1ae0635-0871-4c59-a078-eadab97b3355"}</msg>
+<msg timestamp="20220314 19:45:37.833" level="DEBUG">http://localhost:56577 "POST /session/520aaedef644910e17786cf3cb906c06/element/a1ae0635-0871-4c59-a078-eadab97b3355/value HTTP/1.1" 200 14</msg>
+<msg timestamp="20220314 19:45:37.833" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220314 19:45:37.833" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220314 19:45:37.746" endtime="20220314 19:45:37.833"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 19:45:37.833" level="TRACE">Arguments: [ 'xpath://button' ]</msg>
+<msg timestamp="20220314 19:45:37.833" level="INFO">Clicking element 'xpath://button'.</msg>
+<msg timestamp="20220314 19:45:37.833" level="DEBUG">POST http://localhost:56577/session/520aaedef644910e17786cf3cb906c06/elements {"using": "xpath", "value": "//button"}</msg>
+<msg timestamp="20220314 19:45:37.838" level="DEBUG">http://localhost:56577 "POST /session/520aaedef644910e17786cf3cb906c06/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20220314 19:45:37.838" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220314 19:45:37.838" level="DEBUG">POST http://localhost:56577/session/520aaedef644910e17786cf3cb906c06/element/9fbf2441-b29e-40d5-94ea-947d4e010c20/click {"id": "9fbf2441-b29e-40d5-94ea-947d4e010c20"}</msg>
+<msg timestamp="20220314 19:45:37.852" level="DEBUG">http://localhost:56577 "POST /session/520aaedef644910e17786cf3cb906c06/element/9fbf2441-b29e-40d5-94ea-947d4e010c20/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20220314 19:45:37.852" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220314 19:45:37.852" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220314 19:45:37.833" endtime="20220314 19:45:37.852"/>
+</kw>
+<msg timestamp="20220314 19:45:37.852" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220314 19:45:37.745" endtime="20220314 19:45:37.852"/>
+</kw>
+<kw name="Add to do for delete">
+<msg timestamp="20220314 19:45:37.852" level="TRACE">Arguments: [  ]</msg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:new-task</arg>
+<arg>${TASKFORDELETE}}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220314 19:45:37.853" level="TRACE">Arguments: [ 'id:new-task' | 'IT WRONG TASKS}' ]</msg>
+<msg timestamp="20220314 19:45:37.853" level="INFO">Typing text 'IT WRONG TASKS}' into text field 'id:new-task'.</msg>
+<msg timestamp="20220314 19:45:37.853" level="DEBUG">POST http://localhost:56577/session/520aaedef644910e17786cf3cb906c06/elements {"using": "css selector", "value": "[id=\"new-task\"]"}</msg>
+<msg timestamp="20220314 19:45:37.862" level="DEBUG">http://localhost:56577 "POST /session/520aaedef644910e17786cf3cb906c06/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20220314 19:45:37.862" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220314 19:45:37.862" level="DEBUG">POST http://localhost:56577/session/520aaedef644910e17786cf3cb906c06/element/a1ae0635-0871-4c59-a078-eadab97b3355/clear {"id": "a1ae0635-0871-4c59-a078-eadab97b3355"}</msg>
+<msg timestamp="20220314 19:45:37.869" level="DEBUG">http://localhost:56577 "POST /session/520aaedef644910e17786cf3cb906c06/element/a1ae0635-0871-4c59-a078-eadab97b3355/clear HTTP/1.1" 200 14</msg>
+<msg timestamp="20220314 19:45:37.869" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220314 19:45:37.869" level="DEBUG">POST http://localhost:56577/session/520aaedef644910e17786cf3cb906c06/element/a1ae0635-0871-4c59-a078-eadab97b3355/value {"text": "IT WRONG TASKS}", "value": ["I", "T", " ", "W", "R", "O", "N", "G", " ", "T", "A", "S", "K", "S", "}"], "id": "a1ae0635-0871-4c59-a078-eadab97b3355"}</msg>
+<msg timestamp="20220314 19:45:37.883" level="DEBUG">http://localhost:56577 "POST /session/520aaedef644910e17786cf3cb906c06/element/a1ae0635-0871-4c59-a078-eadab97b3355/value HTTP/1.1" 200 14</msg>
+<msg timestamp="20220314 19:45:37.883" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220314 19:45:37.883" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220314 19:45:37.852" endtime="20220314 19:45:37.883"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 19:45:37.884" level="TRACE">Arguments: [ 'xpath://button' ]</msg>
+<msg timestamp="20220314 19:45:37.884" level="INFO">Clicking element 'xpath://button'.</msg>
+<msg timestamp="20220314 19:45:37.884" level="DEBUG">POST http://localhost:56577/session/520aaedef644910e17786cf3cb906c06/elements {"using": "xpath", "value": "//button"}</msg>
+<msg timestamp="20220314 19:45:37.886" level="DEBUG">http://localhost:56577 "POST /session/520aaedef644910e17786cf3cb906c06/elements HTTP/1.1" 200 169</msg>
+<msg timestamp="20220314 19:45:37.886" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220314 19:45:37.886" level="DEBUG">POST http://localhost:56577/session/520aaedef644910e17786cf3cb906c06/element/9fbf2441-b29e-40d5-94ea-947d4e010c20/click {"id": "9fbf2441-b29e-40d5-94ea-947d4e010c20"}</msg>
+<msg timestamp="20220314 19:45:37.894" level="DEBUG">http://localhost:56577 "POST /session/520aaedef644910e17786cf3cb906c06/element/9fbf2441-b29e-40d5-94ea-947d4e010c20/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20220314 19:45:37.894" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220314 19:45:37.894" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220314 19:45:37.883" endtime="20220314 19:45:37.894"/>
+</kw>
+<msg timestamp="20220314 19:45:37.894" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220314 19:45:37.852" endtime="20220314 19:45:37.894"/>
+</kw>
+<kw name="Open task tap">
+<msg timestamp="20220314 19:45:37.894" level="TRACE">Arguments: [  ]</msg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://a[@href='#todo']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 19:45:37.895" level="TRACE">Arguments: [ "xpath://a[@href='#todo']" ]</msg>
+<msg timestamp="20220314 19:45:37.895" level="INFO">Clicking element 'xpath://a[@href='#todo']'.</msg>
+<msg timestamp="20220314 19:45:37.895" level="DEBUG">POST http://localhost:56577/session/520aaedef644910e17786cf3cb906c06/elements {"using": "xpath", "value": "//a[@href='#todo']"}</msg>
+<msg timestamp="20220314 19:45:37.899" level="DEBUG">http://localhost:56577 "POST /session/520aaedef644910e17786cf3cb906c06/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20220314 19:45:37.900" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220314 19:45:37.900" level="DEBUG">POST http://localhost:56577/session/520aaedef644910e17786cf3cb906c06/element/a9060194-d906-4c7d-86dc-f817fd7815f4/click {"id": "a9060194-d906-4c7d-86dc-f817fd7815f4"}</msg>
+<msg timestamp="20220314 19:45:37.918" level="DEBUG">http://localhost:56577 "POST /session/520aaedef644910e17786cf3cb906c06/element/a9060194-d906-4c7d-86dc-f817fd7815f4/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20220314 19:45:37.919" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220314 19:45:37.919" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220314 19:45:37.894" endtime="20220314 19:45:37.919"/>
+</kw>
+<msg timestamp="20220314 19:45:37.919" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220314 19:45:37.894" endtime="20220314 19:45:37.919"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220314 19:45:37.919" level="TRACE">Arguments: [ '2s' ]</msg>
+<msg timestamp="20220314 19:45:39.920" level="INFO">Slept 2 seconds</msg>
+<msg timestamp="20220314 19:45:39.921" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220314 19:45:37.919" endtime="20220314 19:45:39.921"/>
+</kw>
+<status status="PASS" starttime="20220314 19:45:37.744" endtime="20220314 19:45:39.922"/>
+</test>
+<test id="s1-t3" name="Test case 3 mark complate exam Blue PI">
+<kw name="Mask task 1 complate">
+<msg timestamp="20220314 19:45:39.925" level="TRACE">Arguments: [  ]</msg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div/div[3]/ul/li[1]/label/span[4]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 19:45:39.925" level="TRACE">Arguments: [ 'xpath:/html/body/div/div/div[3]/ul/li[1]/label/span[4]' ]</msg>
+<msg timestamp="20220314 19:45:39.926" level="INFO">Clicking element 'xpath:/html/body/div/div/div[3]/ul/li[1]/label/span[4]'.</msg>
+<msg timestamp="20220314 19:45:39.926" level="DEBUG">POST http://localhost:56577/session/520aaedef644910e17786cf3cb906c06/elements {"using": "xpath", "value": "/html/body/div/div/div[3]/ul/li[1]/label/span[4]"}</msg>
+<msg timestamp="20220314 19:45:39.940" level="DEBUG">http://localhost:56577 "POST /session/520aaedef644910e17786cf3cb906c06/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20220314 19:45:39.940" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220314 19:45:39.940" level="DEBUG">POST http://localhost:56577/session/520aaedef644910e17786cf3cb906c06/element/11456824-b399-48f3-b62a-87c69250dd62/click {"id": "11456824-b399-48f3-b62a-87c69250dd62"}</msg>
+<msg timestamp="20220314 19:45:39.966" level="DEBUG">http://localhost:56577 "POST /session/520aaedef644910e17786cf3cb906c06/element/11456824-b399-48f3-b62a-87c69250dd62/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20220314 19:45:39.967" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220314 19:45:39.967" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220314 19:45:39.925" endtime="20220314 19:45:39.967"/>
+</kw>
+<msg timestamp="20220314 19:45:39.967" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220314 19:45:39.924" endtime="20220314 19:45:39.967"/>
+</kw>
+<kw name="Open complete tap">
+<msg timestamp="20220314 19:45:39.967" level="TRACE">Arguments: [  ]</msg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://a[@href='#completed']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 19:45:39.967" level="TRACE">Arguments: [ "xpath://a[@href='#completed']" ]</msg>
+<msg timestamp="20220314 19:45:39.967" level="INFO">Clicking element 'xpath://a[@href='#completed']'.</msg>
+<msg timestamp="20220314 19:45:39.967" level="DEBUG">POST http://localhost:56577/session/520aaedef644910e17786cf3cb906c06/elements {"using": "xpath", "value": "//a[@href='#completed']"}</msg>
+<msg timestamp="20220314 19:45:39.973" level="DEBUG">http://localhost:56577 "POST /session/520aaedef644910e17786cf3cb906c06/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20220314 19:45:39.973" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220314 19:45:39.973" level="DEBUG">POST http://localhost:56577/session/520aaedef644910e17786cf3cb906c06/element/c03700c4-b67a-43dc-98c4-9d1ce1f2be5c/click {"id": "c03700c4-b67a-43dc-98c4-9d1ce1f2be5c"}</msg>
+<msg timestamp="20220314 19:45:39.994" level="DEBUG">http://localhost:56577 "POST /session/520aaedef644910e17786cf3cb906c06/element/c03700c4-b67a-43dc-98c4-9d1ce1f2be5c/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20220314 19:45:39.995" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220314 19:45:39.995" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220314 19:45:39.967" endtime="20220314 19:45:39.995"/>
+</kw>
+<msg timestamp="20220314 19:45:39.995" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220314 19:45:39.967" endtime="20220314 19:45:39.995"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220314 19:45:39.995" level="TRACE">Arguments: [ '2s' ]</msg>
+<msg timestamp="20220314 19:45:41.996" level="INFO">Slept 2 seconds</msg>
+<msg timestamp="20220314 19:45:41.996" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220314 19:45:39.995" endtime="20220314 19:45:41.996"/>
+</kw>
+<status status="PASS" starttime="20220314 19:45:39.923" endtime="20220314 19:45:41.997"/>
+</test>
+<test id="s1-t4" name="Test case 4 Delete task 2">
+<kw name="Open task tap">
+<msg timestamp="20220314 19:45:41.998" level="TRACE">Arguments: [  ]</msg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://a[@href='#todo']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 19:45:41.999" level="TRACE">Arguments: [ "xpath://a[@href='#todo']" ]</msg>
+<msg timestamp="20220314 19:45:41.999" level="INFO">Clicking element 'xpath://a[@href='#todo']'.</msg>
+<msg timestamp="20220314 19:45:41.999" level="DEBUG">POST http://localhost:56577/session/520aaedef644910e17786cf3cb906c06/elements {"using": "xpath", "value": "//a[@href='#todo']"}</msg>
+<msg timestamp="20220314 19:45:42.006" level="DEBUG">http://localhost:56577 "POST /session/520aaedef644910e17786cf3cb906c06/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20220314 19:45:42.007" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220314 19:45:42.007" level="DEBUG">POST http://localhost:56577/session/520aaedef644910e17786cf3cb906c06/element/a9060194-d906-4c7d-86dc-f817fd7815f4/click {"id": "a9060194-d906-4c7d-86dc-f817fd7815f4"}</msg>
+<msg timestamp="20220314 19:45:42.030" level="DEBUG">http://localhost:56577 "POST /session/520aaedef644910e17786cf3cb906c06/element/a9060194-d906-4c7d-86dc-f817fd7815f4/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20220314 19:45:42.030" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220314 19:45:42.030" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220314 19:45:41.999" endtime="20220314 19:45:42.030"/>
+</kw>
+<msg timestamp="20220314 19:45:42.030" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220314 19:45:41.998" endtime="20220314 19:45:42.030"/>
+</kw>
+<kw name="Delate task 2">
+<msg timestamp="20220314 19:45:42.031" level="TRACE">Arguments: [  ]</msg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div/div[3]/ul/li/button/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220314 19:45:42.031" level="TRACE">Arguments: [ 'xpath:/html/body/div/div/div[3]/ul/li/button/span' ]</msg>
+<msg timestamp="20220314 19:45:42.031" level="INFO">Clicking element 'xpath:/html/body/div/div/div[3]/ul/li/button/span'.</msg>
+<msg timestamp="20220314 19:45:42.032" level="DEBUG">POST http://localhost:56577/session/520aaedef644910e17786cf3cb906c06/elements {"using": "xpath", "value": "/html/body/div/div/div[3]/ul/li/button/span"}</msg>
+<msg timestamp="20220314 19:45:42.040" level="DEBUG">http://localhost:56577 "POST /session/520aaedef644910e17786cf3cb906c06/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20220314 19:45:42.040" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220314 19:45:42.040" level="DEBUG">POST http://localhost:56577/session/520aaedef644910e17786cf3cb906c06/element/a02bcd83-092c-4852-8ca8-98c21eef3f28/click {"id": "a02bcd83-092c-4852-8ca8-98c21eef3f28"}</msg>
+<msg timestamp="20220314 19:45:42.059" level="DEBUG">http://localhost:56577 "POST /session/520aaedef644910e17786cf3cb906c06/element/a02bcd83-092c-4852-8ca8-98c21eef3f28/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20220314 19:45:42.059" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220314 19:45:42.059" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220314 19:45:42.031" endtime="20220314 19:45:42.059"/>
+</kw>
+<msg timestamp="20220314 19:45:42.059" level="TRACE">Return: None</msg>
+<status status="PASS" starttime="20220314 19:45:42.030" endtime="20220314 19:45:42.059"/>
+</kw>
+<status status="PASS" starttime="20220314 19:45:41.997" endtime="20220314 19:45:42.059"/>
+</test>
+<status status="PASS" starttime="20220314 19:45:33.590" endtime="20220314 19:45:42.060"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="Test To do list">Test To do list</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

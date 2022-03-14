@@ -48,6 +48,9 @@ Test case 4 Delete task 2
     open task tap
     sleep    3s
     delate task 2
+    sleep    2s
+    open complete tap
+    sleep   2s
 
 
 
